@@ -1,0 +1,14 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+python-multipart==0.0.6
+torch==2.2.0
+torchvision==0.17.0
+opencv-python==4.8.1.78
+numpy==1.26.1
+Pillow==10.1.0
+ftfy==6.1.1
+regex==2023.10.3
+tqdm==4.66.1
+python-jose==3.3.0
+ultralytics==8.0.196
+transformers==4.35.2 
