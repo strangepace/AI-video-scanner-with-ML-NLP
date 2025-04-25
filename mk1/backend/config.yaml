@@ -1,0 +1,24 @@
+general:
+  model_dir: "models"
+  upload_dir: "uploads"
+  max_results: 10
+
+yolo:
+  model_path: "yolov8n.pt"
+  confidence_threshold: 0.5
+  classes: [0, 1, 2, 3, 5, 7]  # person, bicycle, car, motorcycle, bus, truck
+
+clip:
+  similarity_threshold: 0.3
+  model_name: "openai/clip-vit-base-patch32"
+
+motion:
+  threshold: 0.95
+
+frame_skip:
+  skip_frames: 5
+
+tracking:
+  max_age: 30
+  n_init: 3
+  max_cosine_distance: 0.3 

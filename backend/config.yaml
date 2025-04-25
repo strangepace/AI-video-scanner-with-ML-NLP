@@ -1,0 +1,36 @@
+modes:
+  full_scan:
+    enabled: true
+    description: "Process every frame using YOLOv8 and CLIP"
+  
+  frame_skip:
+    enabled: true
+    skip_frames: 5  # Process every 5th frame
+    description: "Process only every N frames"
+  
+  motion_filter:
+    enabled: true
+    motion_threshold: 30  # Threshold for motion detection
+    min_contour_area: 500  # Minimum area for motion detection
+    description: "Only analyze frames where motion is detected"
+  
+  track_then_match:
+    enabled: true
+    keyframe_interval: 30  # Detect objects every N frames
+    max_age: 30  # Maximum age of a track before deletion
+    min_hits: 3  # Minimum number of hits to confirm a track
+    description: "Track objects across frames and match once"
+
+yolo:
+  model: "yolov8n.pt"
+  confidence_threshold: 0.3
+  device: "cuda"  # or "cpu"
+
+clip:
+  similarity_threshold: 0.2
+  batch_size: 4
+
+general:
+  max_results: 10
+  preview_size: [320, 240]  # Width, Height
+  upload_dir: "uploads" 
