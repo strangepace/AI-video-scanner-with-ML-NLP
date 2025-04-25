@@ -574,9 +574,8 @@ with gr.Blocks(css="""
         
         with gr.Column():
             video_info = gr.HTML(label="Video Information")
-            with gr.Box():
-                gr.Markdown("### Analysis Results")
-                results_output = gr.HTML()
+            gr.Markdown("### Analysis Results")
+            results_output = gr.HTML()
             error_output = gr.Textbox(label="Error", visible=True)
     
     analyze_btn.click(
