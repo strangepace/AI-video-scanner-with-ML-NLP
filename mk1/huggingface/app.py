@@ -31,13 +31,13 @@ CONFIG = {
         }
     },
     "yolo": {
-        "model_path": "yolov8n",  # Use direct model name instead of local file
-        "confidence_threshold": 0.45,
-        "classes": [0, 1, 2, 3, 5, 7]
+        "model_path": "yolov8s",  # Use small model instead of nano for better accuracy
+        "confidence_threshold": 0.3,  # Lower confidence threshold
+        "classes": None  # Allow all classes
     },
     "clip": {
         "model_name": "openai/clip-vit-base-patch32",
-        "similarity_threshold": 0.25
+        "similarity_threshold": 0.2  # Lower similarity threshold
     },
     "output": {
         "num_frames": 3,
@@ -153,17 +153,25 @@ def process_frame(frame: np.ndarray, prompt: str) -> List[Dict]:
         results = yolo_model(frame, verbose=False)[0]
         matches = []
         
+        # Print detection info for debugging
+        print(f"YOLO found {len(results.boxes)} objects")
+        
         for box in results.boxes:
             try:
                 x1, y1, x2, y2 = map(int, box.xyxy[0].tolist())
                 conf = float(box.conf[0])
                 cls = int(box.cls[0])
                 
+                # Print detection details
+                print(f"Found {results.names[cls]} with confidence {conf:.2f}")
+                
                 if conf < CONFIG["yolo"]["confidence_threshold"]:
+                    print(f"Skipping {results.names[cls]} - confidence too low")
                     continue
                     
                 obj_img = frame[y1:y2, x1:x2]
                 if obj_img.size == 0:
+                    print(f"Skipping {results.names[cls]} - empty bounding box")
                     continue
                 
                 # Convert to PIL Image and ensure RGB
@@ -184,6 +192,9 @@ def process_frame(frame: np.ndarray, prompt: str) -> List[Dict]:
                     outputs = clip_model(**inputs)
                     similarity = torch.sigmoid(outputs.logits_per_image).item()
                 
+                # Print CLIP results
+                print(f"CLIP similarity for {results.names[cls]}: {similarity:.2f}")
+                
                 if similarity > CONFIG["clip"]["similarity_threshold"]:
                     matches.append({
                         "class": results.names[cls],
@@ -191,6 +202,9 @@ def process_frame(frame: np.ndarray, prompt: str) -> List[Dict]:
                         "similarity": similarity,
                         "bbox": [x1, y1, x2, y2]
                     })
+                    print(f"Added match: {results.names[cls]}")
+                else:
+                    print(f"Skipping {results.names[cls]} - similarity too low")
                 
                 # Clear some memory
                 del inputs, outputs
@@ -200,6 +214,7 @@ def process_frame(frame: np.ndarray, prompt: str) -> List[Dict]:
                 print(f"Error processing box: {box_error}")
                 continue
         
+        print(f"Found {len(matches)} matches in total")
         return matches
     except Exception as e:
         print(f"Error in process_frame: {e}")
