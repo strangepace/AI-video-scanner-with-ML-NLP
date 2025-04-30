@@ -1,0 +1,110 @@
+2025-04-29 06:05:56,339 - __main__ - INFO - Using device: cuda
+2025-04-29 06:05:58,315 - __main__ - INFO - Loaded YOLOv8 model
+2025-04-29 06:06:11,352 - __main__ - INFO - Loaded CLIP model
+2025-04-29 06:06:11,600 - deep_sort_realtime.embedder.embedder_pytorch - INFO - MobileNetV2 Embedder for Deep Sort initialised
+2025-04-29 06:06:11,600 - deep_sort_realtime.embedder.embedder_pytorch - INFO - - gpu enabled: True
+2025-04-29 06:06:11,600 - deep_sort_realtime.embedder.embedder_pytorch - INFO - - half precision: True
+2025-04-29 06:06:11,600 - deep_sort_realtime.embedder.embedder_pytorch - INFO - - max batch size: 16
+2025-04-29 06:06:11,600 - deep_sort_realtime.embedder.embedder_pytorch - INFO - - expects BGR: True
+2025-04-29 06:06:12,249 - deep_sort_realtime.deepsort_tracker - INFO - DeepSort Tracker initialised
+2025-04-29 06:06:12,249 - deep_sort_realtime.deepsort_tracker - INFO - - max age: 30
+2025-04-29 06:06:12,249 - deep_sort_realtime.deepsort_tracker - INFO - - appearance threshold: 0.3
+2025-04-29 06:06:12,249 - deep_sort_realtime.deepsort_tracker - INFO - - nms threshold: OFF
+2025-04-29 06:06:12,249 - deep_sort_realtime.deepsort_tracker - INFO - - max num of appearance features: 100
+2025-04-29 06:06:12,250 - deep_sort_realtime.deepsort_tracker - INFO - - overriding track class : No
+2025-04-29 06:06:12,250 - deep_sort_realtime.deepsort_tracker - INFO - - today given : No
+2025-04-29 06:06:12,250 - deep_sort_realtime.deepsort_tracker - INFO - - in-build embedder : Yes
+2025-04-29 06:06:12,250 - deep_sort_realtime.deepsort_tracker - INFO - - polygon detections : No
+2025-04-29 06:06:12,250 - __main__ - INFO - Loaded DeepSORT tracker
+2025-04-29 06:06:12,250 - __main__ - INFO - Initialized CLIP matcher
+2025-04-29 06:06:12,256 - pyngrok.ngrok - INFO - Opening tunnel named: http-8000-f47f57d4-eca4-4eec-ac16-1e50987c09e5
+2025-04-29 06:06:12,274 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:06:12+0000 lvl=info msg="no configuration paths supplied"
+2025-04-29 06:06:12,275 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:06:12+0000 lvl=info msg="using configuration at default config path" path=/root/.config/ngrok/ngrok.yml
+2025-04-29 06:06:12,275 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:06:12+0000 lvl=info msg="open config file" path=/root/.config/ngrok/ngrok.yml err=nil
+2025-04-29 06:06:12,320 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:06:12+0000 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-04-29 06:06:12,987 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:06:12+0000 lvl=info msg="client session established" obj=tunnels.session
+2025-04-29 06:06:12,987 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:06:12+0000 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-04-29 06:06:12,993 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:06:12+0000 lvl=info msg=start pg=/api/tunnels id=60ae8969a09afbbe
+2025-04-29 06:06:12,993 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:06:12+0000 lvl=info msg=end pg=/api/tunnels id=60ae8969a09afbbe status=200 dur=343.165µs
+2025-04-29 06:06:12,994 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:06:12+0000 lvl=info msg=start pg=/api/tunnels id=82c4cad8b54006f6
+2025-04-29 06:06:12,994 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:06:12+0000 lvl=info msg=end pg=/api/tunnels id=82c4cad8b54006f6 status=200 dur=121.445µs
+2025-04-29 06:06:12,994 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:06:12+0000 lvl=info msg=start pg=/api/tunnels id=71dc6276978683c1
+2025-04-29 06:06:13,225 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:06:13+0000 lvl=info msg="started tunnel" obj=tunnels name=http-8000-f47f57d4-eca4-4eec-ac16-1e50987c09e5 addr=http://localhost:8000 url=https://da20-34-143-247-50.ngrok-free.app
+2025-04-29 06:06:13,225 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:06:13+0000 lvl=info msg=end pg=/api/tunnels id=71dc6276978683c1 status=201 dur=233.194333ms
+2025-04-29 06:06:13,225 - __main__ - INFO - Public URL: https://da20-34-143-247-50.ngrok-free.app
+2025-04-29 06:07:42,359 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:07:42+0000 lvl=info msg="join connections" obj=join id=765e821bb12c l=127.0.0.1:8000 r=47.186.24.166:25065
+2025-04-29 06:07:57,597 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:07:57+0000 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-04-29 06:07:57,597 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:07:57+0000 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-04-29 06:16:32,630 - __main__ - INFO - Using device: cuda
+2025-04-29 06:16:32,752 - __main__ - INFO - Loaded YOLOv8 model
+2025-04-29 06:16:36,340 - __main__ - INFO - Loaded CLIP model
+2025-04-29 06:16:36,423 - deep_sort_realtime.embedder.embedder_pytorch - INFO - MobileNetV2 Embedder for Deep Sort initialised
+2025-04-29 06:16:36,423 - deep_sort_realtime.embedder.embedder_pytorch - INFO - - gpu enabled: True
+2025-04-29 06:16:36,423 - deep_sort_realtime.embedder.embedder_pytorch - INFO - - half precision: True
+2025-04-29 06:16:36,423 - deep_sort_realtime.embedder.embedder_pytorch - INFO - - max batch size: 16
+2025-04-29 06:16:36,423 - deep_sort_realtime.embedder.embedder_pytorch - INFO - - expects BGR: True
+2025-04-29 06:16:36,717 - deep_sort_realtime.deepsort_tracker - INFO - DeepSort Tracker initialised
+2025-04-29 06:16:36,717 - deep_sort_realtime.deepsort_tracker - INFO - - max age: 30
+2025-04-29 06:16:36,717 - deep_sort_realtime.deepsort_tracker - INFO - - appearance threshold: 0.3
+2025-04-29 06:16:36,717 - deep_sort_realtime.deepsort_tracker - INFO - - nms threshold: OFF
+2025-04-29 06:16:36,717 - deep_sort_realtime.deepsort_tracker - INFO - - max num of appearance features: 100
+2025-04-29 06:16:36,717 - deep_sort_realtime.deepsort_tracker - INFO - - overriding track class : No
+2025-04-29 06:16:36,717 - deep_sort_realtime.deepsort_tracker - INFO - - today given : No
+2025-04-29 06:16:36,717 - deep_sort_realtime.deepsort_tracker - INFO - - in-build embedder : Yes
+2025-04-29 06:16:36,717 - deep_sort_realtime.deepsort_tracker - INFO - - polygon detections : No
+2025-04-29 06:16:36,718 - __main__ - INFO - Loaded DeepSORT tracker
+2025-04-29 06:16:36,718 - __main__ - INFO - Initialized CLIP matcher
+2025-04-29 06:16:36,722 - pyngrok.ngrok - INFO - Opening tunnel named: http-8000-c6ce10a9-cc3d-4d5f-90c7-a137dd2d5429
+2025-04-29 06:16:36,738 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:16:36+0000 lvl=info msg="no configuration paths supplied"
+2025-04-29 06:16:36,739 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:16:36+0000 lvl=info msg="using configuration at default config path" path=/root/.config/ngrok/ngrok.yml
+2025-04-29 06:16:36,741 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:16:36+0000 lvl=info msg="open config file" path=/root/.config/ngrok/ngrok.yml err=nil
+2025-04-29 06:16:36,760 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:16:36+0000 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-04-29 06:16:37,442 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:16:37+0000 lvl=info msg="client session established" obj=tunnels.session
+2025-04-29 06:16:37,442 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:16:37+0000 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-04-29 06:16:37,445 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:16:37+0000 lvl=info msg=start pg=/api/tunnels id=c7d7e10dc12e6848
+2025-04-29 06:16:37,445 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:16:37+0000 lvl=info msg=end pg=/api/tunnels id=c7d7e10dc12e6848 status=200 dur=316.304µs
+2025-04-29 06:16:37,445 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:16:37+0000 lvl=info msg=start pg=/api/tunnels id=cb068aeb2050af48
+2025-04-29 06:16:37,446 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:16:37+0000 lvl=info msg=end pg=/api/tunnels id=cb068aeb2050af48 status=200 dur=93.472µs
+2025-04-29 06:16:37,447 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:16:37+0000 lvl=info msg=start pg=/api/tunnels id=61986145f0e3ceb5
+2025-04-29 06:16:37,673 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:16:37+0000 lvl=info msg="started tunnel" obj=tunnels name=http-8000-c6ce10a9-cc3d-4d5f-90c7-a137dd2d5429 addr=http://localhost:8000 url=https://34a0-34-143-247-50.ngrok-free.app
+2025-04-29 06:16:37,674 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:16:37+0000 lvl=info msg=end pg=/api/tunnels id=61986145f0e3ceb5 status=201 dur=226.713249ms
+2025-04-29 06:16:37,674 - __main__ - INFO - Public URL: https://34a0-34-143-247-50.ngrok-free.app
+2025-04-29 06:23:21,966 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:23:21+0000 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-04-29 06:23:21,967 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:23:21+0000 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-04-29 06:23:45,818 - __main__ - INFO - Using device: cuda
+2025-04-29 06:23:45,930 - __main__ - INFO - Loaded YOLOv8 model
+2025-04-29 06:23:49,234 - __main__ - INFO - Loaded CLIP model
+2025-04-29 06:23:49,353 - deep_sort_realtime.embedder.embedder_pytorch - INFO - MobileNetV2 Embedder for Deep Sort initialised
+2025-04-29 06:23:49,353 - deep_sort_realtime.embedder.embedder_pytorch - INFO - - gpu enabled: True
+2025-04-29 06:23:49,353 - deep_sort_realtime.embedder.embedder_pytorch - INFO - - half precision: True
+2025-04-29 06:23:49,353 - deep_sort_realtime.embedder.embedder_pytorch - INFO - - max batch size: 16
+2025-04-29 06:23:49,353 - deep_sort_realtime.embedder.embedder_pytorch - INFO - - expects BGR: True
+2025-04-29 06:23:49,759 - deep_sort_realtime.deepsort_tracker - INFO - DeepSort Tracker initialised
+2025-04-29 06:23:49,759 - deep_sort_realtime.deepsort_tracker - INFO - - max age: 30
+2025-04-29 06:23:49,759 - deep_sort_realtime.deepsort_tracker - INFO - - appearance threshold: 0.3
+2025-04-29 06:23:49,759 - deep_sort_realtime.deepsort_tracker - INFO - - nms threshold: OFF
+2025-04-29 06:23:49,759 - deep_sort_realtime.deepsort_tracker - INFO - - max num of appearance features: 100
+2025-04-29 06:23:49,759 - deep_sort_realtime.deepsort_tracker - INFO - - overriding track class : No
+2025-04-29 06:23:49,759 - deep_sort_realtime.deepsort_tracker - INFO - - today given : No
+2025-04-29 06:23:49,759 - deep_sort_realtime.deepsort_tracker - INFO - - in-build embedder : Yes
+2025-04-29 06:23:49,760 - deep_sort_realtime.deepsort_tracker - INFO - - polygon detections : No
+2025-04-29 06:23:49,760 - __main__ - INFO - Loaded DeepSORT tracker
+2025-04-29 06:23:49,760 - __main__ - INFO - Initialized CLIP matcher
+2025-04-29 06:23:49,766 - pyngrok.ngrok - INFO - Opening tunnel named: http-8000-f8490ee3-0971-4812-a0d6-575a5af9cc1c
+2025-04-29 06:23:49,788 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:23:49+0000 lvl=info msg="no configuration paths supplied"
+2025-04-29 06:23:49,789 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:23:49+0000 lvl=info msg="using configuration at default config path" path=/root/.config/ngrok/ngrok.yml
+2025-04-29 06:23:49,797 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:23:49+0000 lvl=info msg="open config file" path=/root/.config/ngrok/ngrok.yml err=nil
+2025-04-29 06:23:49,818 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:23:49+0000 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-04-29 06:23:50,532 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:23:50+0000 lvl=info msg="client session established" obj=tunnels.session
+2025-04-29 06:23:50,532 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:23:50+0000 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-04-29 06:23:50,535 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:23:50+0000 lvl=info msg=start pg=/api/tunnels id=6a159a46e09855bc
+2025-04-29 06:23:50,536 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:23:50+0000 lvl=info msg=end pg=/api/tunnels id=6a159a46e09855bc status=200 dur=273.626µs
+2025-04-29 06:23:50,536 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:23:50+0000 lvl=info msg=start pg=/api/tunnels id=40eb6966edd1528c
+2025-04-29 06:23:50,537 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:23:50+0000 lvl=info msg=end pg=/api/tunnels id=40eb6966edd1528c status=200 dur=104.56µs
+2025-04-29 06:23:50,537 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:23:50+0000 lvl=info msg=start pg=/api/tunnels id=ddbbe945313b4759
+2025-04-29 06:23:50,771 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:23:50+0000 lvl=info msg="started tunnel" obj=tunnels name=http-8000-f8490ee3-0971-4812-a0d6-575a5af9cc1c addr=http://localhost:8000 url=https://8443-34-143-247-50.ngrok-free.app
+2025-04-29 06:23:50,771 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:23:50+0000 lvl=info msg=end pg=/api/tunnels id=ddbbe945313b4759 status=201 dur=233.664328ms
+2025-04-29 06:23:50,771 - __main__ - INFO - Public URL: https://8443-34-143-247-50.ngrok-free.app
+2025-04-29 06:25:01,438 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:25:01+0000 lvl=info msg="join connections" obj=join id=7752da1d4497 l=127.0.0.1:8000 r=47.186.24.166:25394
+2025-04-29 06:28:22,435 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:28:22+0000 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-04-29 06:28:22,436 - pyngrok.process.ngrok - INFO - t=2025-04-29T06:28:22+0000 lvl=info msg="session closing" obj=tunnels.session err=nil
